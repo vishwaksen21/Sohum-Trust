@@ -3,25 +3,93 @@ import { Button } from './ui/button';
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/20 py-20 md:py-28 overflow-hidden">
-      {/* Decorative Background Elements - Leafs and Shapes */}
+    <section className="relative bg-gradient-to-br from-amber-50/40 via-orange-50/20 to-rose-50/30 py-20 md:py-28 overflow-hidden">
+      {/* Watercolor Texture Overlay */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23F97316' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        backgroundSize: '30px 30px'
+      }}></div>
+      
+      {/* Decorative Background Elements - Natural Leaf Patterns */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Top Left Leaf - Green */}
-        <div className="absolute top-8 left-0 w-32 h-32 md:w-48 md:h-48 opacity-30">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M100 20C70 50 50 80 60 120C70 160 100 180 120 170C140 160 160 130 150 90C140 50 100 20 100 20Z" fill="#34D399" fillOpacity="0.3"/>
-            <path d="M100 20C75 45 60 75 65 110C70 145 95 165 115 160C135 155 150 130 145 95C140 60 100 20 100 20Z" fill="#10B981" fillOpacity="0.2"/>
+        {/* Top Left Watercolor Leaf Branch - Natural leaf shapes */}
+        <div className="absolute top-0 left-0 w-80 h-80 md:w-[450px] md:h-[450px] opacity-20">
+          <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Branch stems */}
+            <path d="M50 50 Q 80 90, 120 140" stroke="#9FB09C" strokeWidth="1.5" fill="none" opacity="0.3"/>
+            <path d="M50 50 Q 100 70, 160 100" stroke="#A8B8A5" strokeWidth="1.2" fill="none" opacity="0.28"/>
+            <path d="M50 50 Q 70 100, 100 160" stroke="#B4C7AF" strokeWidth="1.3" fill="none" opacity="0.3"/>
+            
+            {/* Natural leaf shapes - teardrop/oval with pointed tips */}
+            <path d="M65 65 Q 70 55, 75 60 Q 78 68, 75 75 Q 70 78, 65 75 Z" fill="#B8C9B4" opacity="0.38"/>
+            <path d="M85 75 Q 92 68, 98 72 Q 100 82, 95 88 Q 88 90, 85 85 Z" fill="#A8B8A5" opacity="0.35"/>
+            <path d="M100 90 Q 108 82, 115 88 Q 118 98, 112 105 Q 104 108, 100 102 Z" fill="#C4D4CC" opacity="0.4"/>
+            
+            <path d="M78 88 Q 84 80, 90 84 Q 92 92, 88 98 Q 82 100, 78 95 Z" fill="#9CB0A4" opacity="0.36"/>
+            <path d="M95 105 Q 102 98, 108 103 Q 110 112, 105 118 Q 98 120, 95 114 Z" fill="#B0C4B8" opacity="0.38"/>
+            <path d="M115 120 Q 123 112, 130 118 Q 132 128, 126 135 Q 118 138, 115 130 Z" fill="#C8D5C4" opacity="0.37"/>
+            
+            <path d="M105 82 Q 112 75, 118 80 Q 120 88, 116 94 Q 110 96, 105 91 Z" fill="#95A89C" opacity="0.34"/>
+            <path d="M128 95 Q 136 88, 143 94 Q 145 104, 139 110 Q 132 112, 128 105 Z" fill="#B8CCC0" opacity="0.36"/>
+            
+            <path d="M72 108 Q 78 100, 84 105 Q 86 114, 81 120 Q 75 122, 72 116 Z" fill="#A4B8B0" opacity="0.35"/>
+            <path d="M88 128 Q 95 120, 102 126 Q 104 136, 98 142 Q 91 144, 88 137 Z" fill="#C8D8D0" opacity="0.39"/>
           </svg>
         </div>
 
-        {/* Top Right Decorative Elements */}
-        <div className="absolute top-12 right-12 w-24 h-24 md:w-40 md:h-40">
-          {/* Chat bubble icon */}
-          <div className="absolute top-0 right-0 w-16 h-16 bg-blue-200/30 rounded-lg rotate-12 flex items-center justify-center">
-            <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-          </div>
+        {/* Top Right Natural Leaf Pattern */}
+        <div className="absolute top-0 right-0 w-72 h-72 md:w-[400px] md:h-[400px] opacity-18">
+          <svg viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Branches */}
+            <path d="M300 40 Q 270 75, 230 120" stroke="#A8B8A5" strokeWidth="1.4" fill="none" opacity="0.3"/>
+            <path d="M300 40 Q 280 60, 250 95" stroke="#B4C7AF" strokeWidth="1.2" fill="none" opacity="0.28"/>
+            
+            {/* Natural leaves */}
+            <path d="M290 50 Q 296 43, 302 48 Q 304 56, 299 62 Q 293 64, 290 58 Z" fill="#B4CAC4" opacity="0.38"/>
+            <path d="M278 62 Q 285 55, 291 60 Q 293 69, 287 75 Q 281 77, 278 70 Z" fill="#A8BCA8" opacity="0.36"/>
+            <path d="M265 75 Q 272 68, 279 74 Q 281 83, 275 89 Q 268 91, 265 84 Z" fill="#C4D4CC" opacity="0.39"/>
+            
+            <path d="M272 88 Q 279 81, 286 87 Q 288 96, 282 102 Q 275 104, 272 97 Z" fill="#9CB0A4" opacity="0.35"/>
+            <path d="M255 95 Q 262 88, 269 94 Q 271 103, 265 109 Q 258 111, 255 104 Z" fill="#B0C4B8" opacity="0.37"/>
+            <path d="M240 110 Q 247 103, 254 109 Q 256 118, 250 124 Q 243 126, 240 119 Z" fill="#C8D8D0" opacity="0.38"/>
+            
+            <path d="M258 108 Q 265 101, 272 107 Q 274 116, 268 122 Q 261 124, 258 117 Z" fill="#A4B8AC" opacity="0.36"/>
+          </svg>
+        </div>
+
+        {/* Bottom Right Large Natural Leaf Pattern */}
+        <div className="absolute bottom-0 right-0 w-96 h-96 md:w-[500px] md:h-[500px] opacity-16">
+          <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Multiple branch stems */}
+            <path d="M380 380 Q 340 330, 290 270" stroke="#A8B8A5" strokeWidth="1.8" fill="none" opacity="0.3"/>
+            <path d="M380 380 Q 350 350, 310 310" stroke="#B4C7AF" strokeWidth="1.5" fill="none" opacity="0.28"/>
+            <path d="M380 380 Q 360 340, 320 290" stroke="#9FB09C" strokeWidth="1.6" fill="none" opacity="0.29"/>
+            
+            {/* Natural leaf shapes */}
+            <path d="M370 370 Q 378 360, 385 368 Q 388 378, 382 385 Q 374 388, 370 380 Z" fill="#B8CAB8" opacity="0.37"/>
+            <path d="M358 358 Q 366 348, 373 356 Q 376 366, 370 373 Q 362 376, 358 368 Z" fill="#A8BCA8" opacity="0.35"/>
+            <path d="M345 345 Q 353 335, 360 343 Q 363 353, 357 360 Q 349 363, 345 355 Z" fill="#C4D4CC" opacity="0.39"/>
+            
+            <path d="M352 338 Q 360 328, 367 336 Q 370 346, 364 353 Q 356 356, 352 348 Z" fill="#9CB0A4" opacity="0.36"/>
+            <path d="M330 330 Q 338 320, 345 328 Q 348 338, 342 345 Q 334 348, 330 340 Z" fill="#B0C4B8" opacity="0.38"/>
+            <path d="M318 318 Q 326 308, 333 316 Q 336 326, 330 333 Q 322 336, 318 328 Z" fill="#C8D8D0" opacity="0.37"/>
+            
+            <path d="M335 310 Q 343 300, 350 308 Q 353 318, 347 325 Q 339 328, 335 320 Z" fill="#95A89C" opacity="0.34"/>
+            <path d="M305 305 Q 313 295, 320 303 Q 323 313, 317 320 Q 309 323, 305 315 Z" fill="#B8CCC0" opacity="0.36"/>
+            <path d="M290 290 Q 298 280, 305 288 Q 308 298, 302 305 Q 294 308, 290 300 Z" fill="#A4B8B0" opacity="0.35"/>
+          </svg>
+        </div>
+
+        {/* Bottom Left Small Natural Leaf Cluster */}
+        <div className="absolute bottom-10 left-10 w-48 h-48 opacity-18">
+          <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 160 Q 50 130, 90 90" stroke="#A8B8A5" strokeWidth="1.3" fill="none" opacity="0.3"/>
+            
+            <path d="M28 152 Q 34 145, 40 150 Q 42 158, 37 164 Q 31 166, 28 160 Z" fill="#B8CAB8" opacity="0.37"/>
+            <path d="M42 140 Q 49 133, 55 139 Q 57 147, 52 153 Q 46 155, 42 149 Z" fill="#C4D4CC" opacity="0.38"/>
+            <path d="M58 125 Q 65 118, 71 124 Q 73 132, 68 138 Q 62 140, 58 134 Z" fill="#A8B8A5" opacity="0.36"/>
+            <path d="M75 108 Q 82 101, 88 107 Q 90 115, 85 121 Q 79 123, 75 117 Z" fill="#B0C4B8" opacity="0.37"/>
+          </svg>
         </div>
 
         {/* Rocket Icon - floating */}
@@ -67,7 +135,7 @@ const HeroSection: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               <span className="text-slate-800">Empowering </span>
               <span className="text-orange-500">Students</span>
               <span className="text-slate-800">,</span>

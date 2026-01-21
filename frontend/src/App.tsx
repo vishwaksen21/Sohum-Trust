@@ -12,7 +12,7 @@ import TestimonialSection from "./components/TestimonialSection";
 import TrustedBySection from "./components/TrustedBySection";
 import Footer from "./components/Footer";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -29,7 +29,7 @@ const Home = () => {
   );
 };
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
       <BrowserRouter>

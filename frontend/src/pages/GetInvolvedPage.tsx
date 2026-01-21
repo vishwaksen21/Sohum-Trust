@@ -1,0 +1,135 @@
+import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import DonationCards from '../components/DonationCards';
+
+const GetInvolvedPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-transparent">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-amber-50/60 via-orange-50/30 to-rose-50/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-800">
+              Get <span className="text-orange-500">Involved</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+              Join us in our mission to empower students and transform futures. Every contribution makes a difference.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Donation Cards */}
+      <DonationCards />
+
+      {/* Ways to Help Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
+              Other Ways to Help
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg border border-orange-100/40">
+                <div className="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-3xl">🎓</span>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">Volunteer</h3>
+                <p className="text-slate-600 mb-4">
+                  Share your expertise and mentor students. Help them navigate their learning journey and career paths.
+                </p>
+                <button className="text-orange-600 font-semibold hover:text-orange-700">
+                  Learn More →
+                </button>
+              </div>
+
+              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-6 shadow-lg border border-indigo-100/40">
+                <div className="w-16 h-16 bg-indigo-200 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-3xl">🤝</span>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">Partner</h3>
+                <p className="text-slate-600 mb-4">
+                  Partner with us as an organization to provide resources, training, or employment opportunities.
+                </p>
+                <button className="text-indigo-600 font-semibold hover:text-indigo-700">
+                  Learn More →
+                </button>
+              </div>
+
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 shadow-lg border border-emerald-100/40">
+                <div className="w-16 h-16 bg-emerald-200 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-3xl">📢</span>
+                </div>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">Spread the Word</h3>
+                <p className="text-slate-600 mb-4">
+                  Help us reach more students by sharing our mission with your network and community.
+                </p>
+                <button className="text-emerald-600 font-semibold hover:text-emerald-700">
+                  Learn More →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-amber-50/40">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-orange-100/40">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-6">
+              Contact Us
+            </h2>
+            <p className="text-lg text-slate-600 text-center mb-8">
+              Have questions or want to learn more? We'd love to hear from you!
+            </p>
+            
+            <form className="space-y-6">
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Name</label>
+                <input 
+                  type="text" 
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  placeholder="Your name"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+                <input 
+                  type="email" 
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+                <textarea 
+                  rows={5}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  placeholder="How can we help you?"
+                ></textarea>
+              </div>
+              
+              <button 
+                type="submit"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default GetInvolvedPage;

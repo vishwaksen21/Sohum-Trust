@@ -1,48 +1,70 @@
 import React from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const MissionSection = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-16 bg-gradient-to-b from-white/80 to-amber-50/30 relative overflow-hidden">
-      {/* Decorative Leaf Elements in Corners */}
+    <section ref={ref} className="py-16 bg-gradient-to-b from-white/80 to-amber-50/30 relative overflow-hidden">
+      {/* Educational Elements in Corners */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Top Left Natural Leaf Pattern */}
-        <div className="absolute top-0 left-0 w-44 h-44 md:w-56 md:h-56 opacity-15">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 20 Q 45 40, 75 70" stroke="#A8B8A5" strokeWidth="1.2" fill="none" opacity="0.3"/>
-            <path d="M20 20 Q 35 35, 55 55" stroke="#B4C7AF" strokeWidth="1" fill="none" opacity="0.28"/>
-            
-            {/* Natural leaf shapes */}
-            <path d="M28 28 Q 33 23, 38 27 Q 40 33, 36 38 Q 31 40, 28 35 Z" fill="#B8CAB8" opacity="0.37"/>
-            <path d="M38 38 Q 44 33, 49 38 Q 51 44, 46 49 Q 41 51, 38 46 Z" fill="#C4D4CC" opacity="0.38"/>
-            <path d="M50 48 Q 56 43, 61 48 Q 63 54, 58 59 Q 53 61, 50 56 Z" fill="#A8B8A5" opacity="0.36"/>
-            <path d="M62 60 Q 68 55, 73 60 Q 75 66, 70 71 Q 65 73, 62 68 Z" fill="#B0C4B8" opacity="0.37"/>
+        {/* Top Left - Open Book */}
+        <motion.div 
+          className="absolute top-8 left-8 opacity-12"
+          initial={{ opacity: 0, x: -30, rotate: -15 }}
+          animate={isInView ? { opacity: 0.12, x: 0, rotate: 0 } : { opacity: 0, x: -30, rotate: -15 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <svg width="90" height="70" viewBox="0 0 90 70" fill="none">
+            <path d="M10 15 Q10 10, 15 10 L40 10 Q45 10, 45 15 L45 55 Q45 58, 42 60 L15 60 Q10 60, 10 55 Z" fill="#FB8C00"/>
+            <path d="M80 15 Q80 10, 75 10 L50 10 Q45 10, 45 15 L45 55 Q45 58, 48 60 L75 60 Q80 60, 80 55 Z" fill="#FF9800"/>
+            <line x1="45" y1="15" x2="45" y2="60" stroke="#fff" strokeWidth="2" opacity="0.4"/>
           </svg>
-        </div>
+        </motion.div>
         
-        {/* Bottom Right Natural Leaf Pattern */}
-        <div className="absolute bottom-0 right-0 w-48 h-48 md:w-64 md:h-64 opacity-13">
-          <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M200 200 Q 170 170, 135 135" stroke="#A8B8A5" strokeWidth="1.3" fill="none" opacity="0.3"/>
-            <path d="M200 200 Q 180 185, 155 165" stroke="#9FB09C" strokeWidth="1.1" fill="none" opacity="0.28"/>
-            
-            {/* Natural leaves */}
-            <path d="M192 192 Q 198 185, 203 190 Q 205 197, 200 203 Q 194 205, 192 199 Z" fill="#B4CAC4" opacity="0.37"/>
-            <path d="M180 180 Q 186 173, 191 178 Q 193 185, 188 191 Q 182 193, 180 187 Z" fill="#C4D4CC" opacity="0.38"/>
-            <path d="M165 165 Q 171 158, 176 163 Q 178 170, 173 176 Q 167 178, 165 172 Z" fill="#A8B8A5" opacity="0.36"/>
-            <path d="M148 148 Q 154 141, 159 146 Q 161 153, 156 159 Q 150 161, 148 155 Z" fill="#B0C4B8" opacity="0.37"/>
+        {/* Bottom Right - Tech/Gear */}
+        <motion.div 
+          className="absolute bottom-8 right-8 opacity-11"
+          initial={{ opacity: 0, x: 30, rotate: 15 }}
+          animate={isInView ? { opacity: 0.11, x: 0, rotate: 0 } : { opacity: 0, x: 30, rotate: 15 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        >
+          <svg width="85" height="85" viewBox="0 0 85 85" fill="none">
+            <circle cx="42.5" cy="42.5" r="18" fill="#5C6BC0"/>
+            <circle cx="42.5" cy="42.5" r="10" fill="#E8EAF6"/>
+            <rect x="39" y="5" width="7" height="15" rx="2" fill="#5C6BC0"/>
+            <rect x="39" y="65" width="7" height="15" rx="2" fill="#5C6BC0"/>
+            <rect x="5" y="39" width="15" height="7" rx="2" fill="#5C6BC0"/>
+            <rect x="65" y="39" width="15" height="7" rx="2" fill="#5C6BC0"/>
           </svg>
-        </div>
+        </motion.div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-700">
+        <motion.div 
+          className="max-w-4xl mx-auto text-center space-y-4"
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        >
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold text-slate-700"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+          >
             Support Tech Education for Underprivileged Students
-          </h2>
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+          </motion.h2>
+          <motion.p 
+            className="text-lg md:text-xl text-slate-600 leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+          >
             Your donation to Sohum Trust empowers students in Tier 2 and Tier 3 cities with vital tech skills in coding, STEM, and digital literacy, opening doors to a brighter future.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );

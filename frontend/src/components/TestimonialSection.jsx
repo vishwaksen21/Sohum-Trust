@@ -1,57 +1,41 @@
 import React from 'react';
 import { Quote } from 'lucide-react';
 import { testimonial } from '../mockData';
+import { motion, useInView } from 'framer-motion';
 
 const TestimonialSection = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-20 bg-gradient-to-br from-amber-50/50 via-orange-50/30 to-rose-50/20 relative overflow-hidden">
+    <section ref={ref} className="py-20 bg-gradient-to-br from-amber-50/50 via-orange-50/30 to-rose-50/20 relative overflow-hidden">
       {/* Watercolor Texture */}
       <div className="absolute inset-0 opacity-30 pointer-events-none" style={{
         backgroundImage: `radial-gradient(ellipse at top left, rgba(251, 140, 0, 0.1) 0%, transparent 50%), radial-gradient(ellipse at bottom right, rgba(134, 166, 138, 0.12) 0%, transparent 50%)`
       }}></div>
       
-      {/* Decorative Background Elements */}
+      {/* Educational Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Left Watercolor Leaf Branch */}
-        <div className="absolute top-10 left-0 w-56 h-72 md:w-72 md:h-96 opacity-10">
-          <svg viewBox="0 0 220 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 30 Q 55 70, 90 120 T 180 270" stroke="#A8B8A5" strokeWidth="2" fill="none" opacity="0.3"/>
-            
-            <ellipse cx="28" cy="42" rx="14" ry="9" fill="#B8C9B4" opacity="0.4" transform="rotate(-22 28 42)"/>
-            <ellipse cx="40" cy="56" rx="16" ry="10" fill="#C8D5C4" opacity="0.38" transform="rotate(18 40 56)"/>
-            <ellipse cx="52" cy="72" rx="15" ry="9" fill="#A8B8A5" opacity="0.4" transform="rotate(-16 52 72)"/>
-            
-            <ellipse cx="68" cy="90" rx="17" ry="11" fill="#9FB09C" opacity="0.37" transform="rotate(20 68 90)"/>
-            <ellipse cx="84" cy="110" rx="16" ry="10" fill="#B4C7AF" opacity="0.4" transform="rotate(-22 84 110)"/>
-            <ellipse cx="100" cy="130" rx="18" ry="11" fill="#C8D5C4" opacity="0.38" transform="rotate(16 100 130)"/>
-            
-            <ellipse cx="120" cy="155" rx="15" ry="9" fill="#A8B8A5" opacity="0.4" transform="rotate(-18 120 155)"/>
-            <ellipse cx="138" cy="180" rx="17" ry="11" fill="#9FB09C" opacity="0.37" transform="rotate(22 138 180)"/>
-            
-            <ellipse cx="156" cy="208" rx="16" ry="10" fill="#B8C9B4" opacity="0.4" transform="rotate(-20 156 208)"/>
-            <ellipse cx="170" cy="235" rx="14" ry="9" fill="#C8D5C4" opacity="0.38" transform="rotate(15 170 235)"/>
-            <ellipse cx="178" cy="260" rx="15" ry="10" fill="#A8B8A5" opacity="0.4" transform="rotate(-18 178 260)"/>
+        {/* Left - Lightbulb */}
+        <div className="absolute top-16 left-8 opacity-10">
+          <svg width="70" height="90" viewBox="0 0 70 90" fill="none">
+            <ellipse cx="35" cy="28" rx="20" ry="24" fill="#FFA726"/>
+            <rect x="27" y="48" width="16" height="14" rx="2" fill="#FFB74D"/>
+            <rect x="29" y="62" width="12" height="5" rx="1" fill="#FFB74D"/>
+            <line x1="35" y1="5" x2="35" y2="0" stroke="#FFA726" strokeWidth="3"/>
+            <line x1="13" y1="13" x2="9" y2="9" stroke="#FFA726" strokeWidth="3"/>
+            <line x1="57" y1="13" x2="61" y2="9" stroke="#FFA726" strokeWidth="3"/>
           </svg>
         </div>
         
-        {/* Right Side Watercolor Leaf Branch */}
-        <div className="absolute top-10 right-0 w-48 h-64 md:w-64 md:h-80 opacity-9">
-          <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M180 40 Q 145 80, 110 130 T 30 260" stroke="#A8B8A5" strokeWidth="1.8" fill="none" opacity="0.3"/>
-            
-            <ellipse cx="170" cy="52" rx="15" ry="9" fill="#B4C7AF" opacity="0.4" transform="rotate(25 170 52)"/>
-            <ellipse cx="158" cy="66" rx="13" ry="8" fill="#C8D5C4" opacity="0.38" transform="rotate(-18 158 66)"/>
-            <ellipse cx="146" cy="82" rx="16" ry="10" fill="#A8B8A5" opacity="0.4" transform="rotate(18 146 82)"/>
-            
-            <ellipse cx="130" cy="102" rx="14" ry="9" fill="#9FB09C" opacity="0.37" transform="rotate(-20 130 102)"/>
-            <ellipse cx="115" cy="122" rx="17" ry="11" fill="#B8C9B4" opacity="0.4" transform="rotate(22 115 122)"/>
-            
-            <ellipse cx="96" cy="146" rx="15" ry="9" fill="#C8D5C4" opacity="0.38" transform="rotate(-16 96 146)"/>
-            <ellipse cx="78" cy="172" rx="18" ry="11" fill="#A8B8A5" opacity="0.4" transform="rotate(18 78 172)"/>
-            
-            <ellipse cx="60" cy="200" rx="16" ry="10" fill="#9FB09C" opacity="0.37" transform="rotate(-22 60 200)"/>
-            <ellipse cx="45" cy="228" rx="14" ry="9" fill="#B4C7AF" opacity="0.38" transform="rotate(16 45 228)"/>
-            <ellipse cx="34" cy="252" rx="15" ry="10" fill="#C8D5C4" opacity="0.4" transform="rotate(-18 34 252)"/>
+        {/* Right Side - Book */}
+        <div className="absolute top-16 right-8 opacity-11">
+          <svg width="80" height="65" viewBox="0 0 80 65" fill="none">
+            <rect x="12" y="28" width="50" height="12" rx="1" fill="#FB8C00"/>
+            <rect x="15" y="22" width="50" height="12" rx="1" fill="#FF9800"/>
+            <rect x="10" y="34" width="50" height="12" rx="1" fill="#F57C00"/>
+            <rect x="18" y="16" width="50" height="12" rx="1" fill="#FFA726"/>
+            <line x1="40" y1="16" x2="40" y2="46" stroke="#fff" strokeWidth="2" opacity="0.4"/>
           </svg>
         </div>
         
@@ -63,23 +47,26 @@ const TestimonialSection = () => {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          <div 
+        <motion.div 
+          className="max-w-4xl mx-auto"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div 
             className="relative bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border border-orange-100/40"
             style={{
               boxShadow: '0 20px 40px -10px rgba(251, 140, 0, 0.15), 0 10px 20px -5px rgba(251, 140, 0, 0.1)'
             }}
+            initial={{ y: 50 }}
+            animate={isInView ? { y: 0 } : { y: 50 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            {/* Delicate watercolor leaf in corner */}
-            <div className="absolute bottom-4 right-4 w-20 h-24 opacity-8">
-              <svg viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 70 Q 20 55, 30 40 T 50 10" stroke="#A8B8A5" strokeWidth="1" fill="none" opacity="0.3"/>
-                
-                <ellipse cx="14" cy="64" rx="8" ry="5" fill="#B8C9B4" opacity="0.4" transform="rotate(-22 14 64)"/>
-                <ellipse cx="20" cy="56" rx="9" ry="6" fill="#C8D5C4" opacity="0.38" transform="rotate(16 20 56)"/>
-                <ellipse cx="28" cy="45" rx="8" ry="5" fill="#A8B8A5" opacity="0.4" transform="rotate(-18 28 45)"/>
-                <ellipse cx="36" cy="32" rx="10" ry="6" fill="#9FB09C" opacity="0.37" transform="rotate(20 36 32)"/>
-                <ellipse cx="44" cy="20" rx="9" ry="6" fill="#B4C7AF" opacity="0.4" transform="rotate(-16 44 20)"/>
+            {/* Small star/achievement icon in corner */}
+            <div className="absolute bottom-4 right-4 w-12 h-12 opacity-9">
+              <svg viewBox="0 0 50 50" fill="none">
+                <circle cx="25" cy="25" r="22" fill="#FFA726" opacity="0.3"/>
+                <path d="M25 12 L27.5 22 L37 22 L29 28 L31.5 38 L25 32 L18.5 38 L21 28 L13 22 L22.5 22 Z" fill="#FFA726"/>
               </svg>
             </div>
             
@@ -111,8 +98,8 @@ const TestimonialSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

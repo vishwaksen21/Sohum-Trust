@@ -4,43 +4,27 @@ import { partnerPlaceholders } from '../mockData';
 const TrustedBySection = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-white/90 to-amber-50/30 border-t border-orange-100/30 relative overflow-hidden">
-      {/* Subtle leaf decorations */}
+      {/* Subtle educational decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Left delicate watercolor leaf branch */}
-        <div className="absolute top-8 left-4 w-20 h-28 md:w-28 md:h-40 opacity-8">
-          <svg viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 10 Q 25 30, 40 55 T 70 110" stroke="#A8B8A5" strokeWidth="1.2" fill="none" opacity="0.3"/>
-            
-            <ellipse cx="14" cy="18" rx="8" ry="5" fill="#B8C9B4" opacity="0.4" transform="rotate(-20 14 18)"/>
-            <ellipse cx="22" cy="28" rx="9" ry="6" fill="#C8D5C4" opacity="0.38" transform="rotate(15 22 28)"/>
-            <ellipse cx="32" cy="42" rx="8" ry="5" fill="#A8B8A5" opacity="0.4" transform="rotate(-18 32 42)"/>
-            
-            <ellipse cx="42" cy="58" rx="10" ry="6" fill="#9FB09C" opacity="0.37" transform="rotate(18 42 58)"/>
-            <ellipse cx="52" cy="76" rx="9" ry="6" fill="#B4C7AF" opacity="0.4" transform="rotate(-20 52 76)"/>
-            
-            <ellipse cx="62" cy="94" rx="11" ry="7" fill="#C8D5C4" opacity="0.38" transform="rotate(16 62 94)"/>
-            <ellipse cx="68" cy="108" rx="8" ry="5" fill="#A8B8A5" opacity="0.4" transform="rotate(-15 68 108)"/>
+        {/* Left - Small pencil icon */}
+        <div className="absolute top-8 left-4 opacity-8">
+          <svg width="35" height="80" viewBox="0 0 35 80" fill="none">
+            <polygon points="17,5 14,12 20,12" fill="#FFB74D"/>
+            <rect x="12" y="12" width="10" height="48" fill="#FB8C00"/>
+            <polygon points="12,60 17,68 22,60" fill="#6D4C41"/>
           </svg>
         </div>
         
-        {/* Right delicate watercolor leaf branch */}
-        <div className="absolute bottom-8 right-4 w-20 h-28 md:w-28 md:h-40 opacity-8">
-          <svg viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M70 10 Q 55 30, 40 55 T 10 110" stroke="#A8B8A5" strokeWidth="1.2" fill="none" opacity="0.3"/>
-            
-            <ellipse cx="66" cy="18" rx="9" ry="6" fill="#B4C7AF" opacity="0.4" transform="rotate(22 66 18)"/>
-            <ellipse cx="58" cy="28" rx="8" ry="5" fill="#C8D5C4" opacity="0.38" transform="rotate(-16 58 28)"/>
-            <ellipse cx="48" cy="42" rx="10" ry="6" fill="#A8B8A5" opacity="0.4" transform="rotate(18 48 42)"/>
-            
-            <ellipse cx="38" cy="58" rx="9" ry="6" fill="#9FB09C" opacity="0.37" transform="rotate(-20 38 58)"/>
-            <ellipse cx="28" cy="76" rx="11" ry="7" fill="#B8C9B4" opacity="0.4" transform="rotate(16 28 76)"/>
-            
-            <ellipse cx="18" cy="94" rx="8" ry="5" fill="#C8D5C4" opacity="0.38" transform="rotate(-18 18 94)"/>
-            <ellipse cx="12" cy="108" rx="9" ry="6" fill="#A8B8A5" opacity="0.4" transform="rotate(20 12 108)"/>
+        {/* Right - Small graduation cap */}
+        <div className="absolute bottom-8 right-4 opacity-8">
+          <svg width="45" height="40" viewBox="0 0 45 40" fill="none">
+            <polygon points="22,8 8,14 22,20 36,14" fill="#5C6BC0"/>
+            <rect x="20" y="20" width="4" height="10" fill="#5C6BC0"/>
+            <ellipse cx="22" cy="30" rx="3" ry="1" fill="#5C6BC0"/>
           </svg>
         </div>
         
-        {/* Thin leafy separator line at top */}
+        {/* Thin separator line at top */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-200/40 to-transparent"></div>
       </div>
       

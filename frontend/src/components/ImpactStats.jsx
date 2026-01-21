@@ -1,6 +1,7 @@
 import React from 'react';
 import { GraduationCap, MapPin, BarChart } from 'lucide-react';
 import { impactStats } from '../mockData';
+import { motion, useInView } from 'framer-motion';
 
 const iconMap = {
   'graduation-cap': GraduationCap,
@@ -9,85 +10,71 @@ const iconMap = {
 };
 
 const ImpactStats = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-16 bg-gradient-to-br from-amber-50/40 via-orange-50/20 to-white/80 relative overflow-hidden">
+    <section ref={ref} className="py-16 bg-gradient-to-br from-amber-50/40 via-orange-50/20 to-white/80 relative overflow-hidden">
       {/* Watercolor Texture */}
       <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
         backgroundImage: `radial-gradient(circle at 20% 50%, rgba(251, 140, 0, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(134, 166, 138, 0.15) 0%, transparent 50%)`
       }}></div>
       
-      {/* Decorative Background Elements */}
+      {/* Educational Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Right Side Watercolor Leaf Branch */}
-        <div className="absolute top-10 right-0 w-56 h-64 md:w-72 md:h-80 opacity-12">
-          <svg viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M200 30 Q 160 70, 120 120 T 40 240" stroke="#A8B8A5" strokeWidth="2" fill="none" opacity="0.3"/>
-            
-            {/* Leaf clusters along the branch */}
-            <ellipse cx="185" cy="45" rx="16" ry="10" fill="#B8C9B4" opacity="0.4" transform="rotate(25 185 45)"/>
-            <ellipse cx="172" cy="56" rx="14" ry="9" fill="#C8D5C4" opacity="0.38" transform="rotate(-18 172 56)"/>
-            <ellipse cx="158" cy="70" rx="17" ry="11" fill="#A8B8A5" opacity="0.4" transform="rotate(15 158 70)"/>
-            
-            <ellipse cx="140" cy="88" rx="15" ry="10" fill="#9FB09C" opacity="0.37" transform="rotate(-20 140 88)"/>
-            <ellipse cx="125" cy="105" rx="18" ry="11" fill="#B4C7AF" opacity="0.4" transform="rotate(18 125 105)"/>
-            <ellipse cx="110" cy="122" rx="16" ry="10" fill="#C8D5C4" opacity="0.38" transform="rotate(-15 110 122)"/>
-            
-            <ellipse cx="90" cy="145" rx="17" ry="11" fill="#A8B8A5" opacity="0.4" transform="rotate(22 90 145)"/>
-            <ellipse cx="72" cy="168" rx="15" ry="9" fill="#9FB09C" opacity="0.36" transform="rotate(-18 72 168)"/>
-            <ellipse cx="58" cy="192" rx="19" ry="12" fill="#B8C9B4" opacity="0.4" transform="rotate(16 58 192)"/>
-            
-            <ellipse cx="46" cy="218" rx="16" ry="10" fill="#C8D5C4" opacity="0.38" transform="rotate(-20 46 218)"/>
-            <ellipse cx="38" cy="235" rx="14" ry="9" fill="#A8B8A5" opacity="0.36" transform="rotate(14 38 235)"/>
+        {/* Right Side - Chemistry Flask */}
+        <div className="absolute top-10 right-8 opacity-10">
+          <svg width="80" height="100" viewBox="0 0 80 100" fill="none">
+            <rect x="30" y="10" width="20" height="8" rx="2" fill="#5C6BC0"/>
+            <path d="M32 18 L28 60 Q25 75, 35 85 L45 85 Q55 75, 52 60 L48 18 Z" fill="#7986CB" opacity="0.6"/>
+            <ellipse cx="40" cy="85" rx="10" ry="3" fill="#5C6BC0"/>
+            <circle cx="35" cy="60" r="4" fill="#E8EAF6"/>
+            <circle cx="43" cy="68" r="3" fill="#E8EAF6"/>
           </svg>
         </div>
         
-        {/* Left Side Watercolor Leaf Branch */}
-        <div className="absolute bottom-10 left-0 w-48 h-56 md:w-64 md:h-72 opacity-10">
-          <svg viewBox="0 0 200 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 240 Q 50 200, 90 160 T 180 50" stroke="#A8B8A5" strokeWidth="2" fill="none" opacity="0.3"/>
-            
-            <ellipse cx="28" cy="228" rx="15" ry="10" fill="#B4C7AF" opacity="0.4" transform="rotate(-25 28 228)"/>
-            <ellipse cx="40" cy="215" rx="13" ry="8" fill="#C8D5C4" opacity="0.37" transform="rotate(18 40 215)"/>
-            <ellipse cx="54" cy="200" rx="16" ry="10" fill="#A8B8A5" opacity="0.4" transform="rotate(-16 54 200)"/>
-            
-            <ellipse cx="70" cy="182" rx="14" ry="9" fill="#9FB09C" opacity="0.38" transform="rotate(20 70 182)"/>
-            <ellipse cx="88" cy="165" rx="17" ry="11" fill="#B8C9B4" opacity="0.4" transform="rotate(-22 88 165)"/>
-            
-            <ellipse cx="108" cy="145" rx="15" ry="9" fill="#C8D5C4" opacity="0.37" transform="rotate(15 108 145)"/>
-            <ellipse cx="128" cy="125" rx="18" ry="11" fill="#A8B8A5" opacity="0.4" transform="rotate(-18 128 125)"/>
-            
-            <ellipse cx="148" cy="102" rx="16" ry="10" fill="#9FB09C" opacity="0.38" transform="rotate(22 148 102)"/>
-            <ellipse cx="165" cy="80" rx="14" ry="9" fill="#B4C7AF" opacity="0.36" transform="rotate(-16 165 80)"/>
-            <ellipse cx="178" cy="62" rx="17" ry="11" fill="#C8D5C4" opacity="0.4" transform="rotate(18 178 62)"/>
+        {/* Left Side - Award Trophy */}
+        <div className="absolute bottom-12 left-8 opacity-11">
+          <svg width="70" height="85" viewBox="0 0 70 85" fill="none">
+            <ellipse cx="35" cy="25" rx="18" ry="20" fill="#FFA726"/>
+            <rect x="28" y="42" width="14" height="22" fill="#FFB74D"/>
+            <rect x="22" y="64" width="26" height="6" rx="2" fill="#FB8C00"/>
+            <circle cx="35" cy="25" r="12" fill="#FFF3E0"/>
+            <path d="M35 20 L37 26 L43 26 L38 30 L40 36 L35 32 L30 36 L32 30 L27 26 L33 26 Z" fill="#FFA726"/>
           </svg>
         </div>
         
         {/* Decorative Soft Circles */}
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-100/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-100/25 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-48 h-48 bg-indigo-100/25 rounded-full blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {impactStats.map((stat) => {
+          {impactStats.map((stat, index) => {
             const Icon = iconMap[stat.icon];
             return (
-              <div
+              <motion.div
                 key={stat.id}
                 className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-orange-100/30"
                 style={{
                   boxShadow: '0 10px 30px -5px rgba(251, 140, 0, 0.12), 0 4px 6px -2px rgba(251, 140, 0, 0.05)'
                 }}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.9 }}
+                transition={{ 
+                  duration: 0.6, 
+                  ease: "easeOut", 
+                  delay: index * 0.2 
+                }}
               >
-                {/* Small watercolor leaf branch in corner */}
-                <div className="absolute top-3 right-3 w-10 h-12 opacity-10">
-                  <svg viewBox="0 0 35 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 5 Q 12 14, 18 24 T 30 42" stroke="#A8B8A5" strokeWidth="0.8" fill="none" opacity="0.3"/>
-                    
-                    <ellipse cx="8" cy="9" rx="5" ry="3" fill="#B8C9B4" opacity="0.4" transform="rotate(-20 8 9)"/>
-                    <ellipse cx="13" cy="16" rx="6" ry="4" fill="#C8D5C4" opacity="0.38" transform="rotate(15 13 16)"/>
-                    <ellipse cx="19" cy="26" rx="5" ry="3" fill="#A8B8A5" opacity="0.4" transform="rotate(-18 19 26)"/>
-                    <ellipse cx="26" cy="36" rx="6" ry="4" fill="#9FB09C" opacity="0.37" transform="rotate(18 26 36)"/>
+                {/* Small educational icon in corner */}
+                <div className="absolute top-3 right-3 w-10 h-10 opacity-10">
+                  <svg viewBox="0 0 40 40" fill="none">
+                    <rect x="8" y="15" width="24" height="4" rx="1" fill="#FB8C00"/>
+                    <rect x="10" y="10" width="20" height="4" rx="1" fill="#FF9800"/>
+                    <rect x="6" y="20" width="28" height="4" rx="1" fill="#F57C00"/>
+                    <line x1="20" y1="10" x2="20" y2="24" stroke="#fff" strokeWidth="1.5" opacity="0.5"/>
                   </svg>
                 </div>
                 
@@ -102,7 +89,7 @@ const ImpactStats = () => {
                     {stat.label}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

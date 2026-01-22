@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import WhatWeEnable from '../components/WhatWeEnable';
+import WhatWeEnable from '../components/Programs';
 
 const WhatWeEnablePage: React.FC = () => {
   return (
@@ -41,26 +41,22 @@ const WhatWeEnablePage: React.FC = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-[#fef3e8] to-amber-50 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-slate-800 mb-4">💻 Tech Skills</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-4">🏫 Core Education</h3>
                 <ul className="space-y-2 text-slate-600">
-                  <li>• Web Development (HTML, CSS, JavaScript, React)</li>
-                  <li>• Python Programming</li>
-                  <li>• Data Structures & Algorithms</li>
-                  <li>• Mobile App Development</li>
-                  <li>• Database Management</li>
-                  <li>• Cloud Computing Basics</li>
+                  <li>• Primary to Higher Secondary Schooling</li>
+                  <li>• Undergraduate & Graduate Programs</li>
+                  <li>• Basic Sciences, Commerce & Humanities</li>
+                  <li>• Economics, Social Sciences & Arts</li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-slate-800 mb-4">🎯 Soft Skills</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-4">🔬 Specialty & Research</h3>
                 <ul className="space-y-2 text-slate-600">
-                  <li>• Communication & Presentation</li>
-                  <li>• Problem Solving & Critical Thinking</li>
-                  <li>• Teamwork & Collaboration</li>
-                  <li>• Time Management</li>
-                  <li>• Interview Preparation</li>
-                  <li>• Resume Building</li>
+                  <li>• Medical, Para-Medical & Bio Sciences</li>
+                  <li>• Engineering & Polytechnic Institutes</li>
+                  <li>• Veda & Sanskrit Patashalas</li>
+                  <li>• Advanced Research in Social Sciences</li>
                 </ul>
               </div>
             </div>

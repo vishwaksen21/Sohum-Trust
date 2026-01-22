@@ -15,7 +15,7 @@ const AboutUs: React.FC = () => {
               About <span className="text-[#f2a041]">Sohum Trust</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-              Bridging the education gap in Tier 2 & 3 cities through quality tech education and empowerment.
+              Nurturing Minds, Illuminating Futures through comprehensive educational advancement.
             </p>
           </div>
         </div>
@@ -26,26 +26,23 @@ const AboutUs: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Our Story</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Who We Are</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-4">
-                Sohum Trust was founded with a vision to democratize access to quality tech education for students in Tier 2 and Tier 3 cities across India. We believe that every student, regardless of their geographical location or economic background, deserves the opportunity to learn, grow, and succeed in the digital age.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Our journey began when we noticed the significant gap in educational resources and opportunities between metropolitan cities and smaller towns. We set out to bridge this gap by providing comprehensive tech education, mentorship, and career guidance to underprivileged students.
+                Registered in Karnataka, Sohum Trust champions comprehensive educational advancement, establishing and sustaining institutions that empower learners at every stage. From foundational schooling to cutting-edge research, our initiatives foster intellectual growth, cultural preservation, and professional excellence across diverse disciplines.
               </p>
             </div>
 
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Our Mission</h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                To empower students in Tier 2 & 3 cities with vital tech skills in coding, STEM, and digital literacy, enabling them to build successful careers and transform their futures. We are committed to creating equal opportunities for all students, regardless of their background.
+                Our mission integrates, operates, and elevates educational ecosystems—spanning primary academies to specialized research hubs—ensuring equitable opportunities rooted in India's vibrant heritage.
               </p>
             </div>
 
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">Our Vision</h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                A future where every student in India has access to world-class tech education and the opportunity to reach their full potential. We envision a generation of skilled, confident, and empowered youth who will drive innovation and progress in their communities and beyond.
+                Sohum Trust envisions an India where every individual accesses transformative education tailored to their aspirations.
               </p>
             </div>
           </div>

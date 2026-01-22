@@ -3,14 +3,14 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import MissionSection from "./components/MissionSection";
-import ImpactStats from "./components/ImpactStats";
-import TrustIndicators from "./components/TrustIndicators";
-import WhatWeEnable from "./components/WhatWeEnable";
-import DonationCards from "./components/DonationCards";
-import TestimonialSection from "./components/TestimonialSection";
-import TrustedBySection from "./components/TrustedBySection";
+import HeroSection from "./components/Hero";
+import MissionSection from "./components/Mission"; // Correct import path
+import ImpactStats from "./components/Impact"; // Correct import path
+import TrustIndicators from "./components/Trust"; // Correct import path
+import WhatWeEnable from "./components/Programs"; // Correct import path
+import DonationCards from "./components/Donation"; // Correct import path
+import TestimonialSection from "./components/Testimonials"; // Correct import path
+import TrustedBySection from "./components/TrustedBy"; // Correct import path
 import Footer from "./components/Footer";
 import AboutUs from "./pages/AboutUs";
 import WhatWeEnablePage from "./pages/WhatWeEnablePage";

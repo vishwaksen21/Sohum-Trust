@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ImpactStats from '../components/ImpactStats';
-import TestimonialSection from '../components/TestimonialSection';
+import ImpactStats from '../components/Impact';
+import TestimonialSection from '../components/Testimonials';
 
 const ImpactPage: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const ImpactPage: React.FC = () => {
               Our <span className="text-[#f2a041]">Impact</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-              See how we're transforming lives and creating opportunities for students across India.
+              Transparent governance ensures every investment yields enduring societal dividends.
             </p>
           </div>
         </div>

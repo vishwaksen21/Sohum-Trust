@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import DonationCards from '../components/DonationCards';
+import DonationCards from '../components/Donation';
 
 const GetInvolvedPage: React.FC = () => {
   return (
@@ -29,9 +29,12 @@ const GetInvolvedPage: React.FC = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-12">
-              Other Ways to Help
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-6">
+              Engagement Opportunities
             </h2>
+            <p className="text-lg text-slate-600 text-center mb-12 max-w-3xl mx-auto">
+              Partner with Sohum Trust through 80G-eligible contributions, mentorship programs, or infrastructure endowments.
+            </p>
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gradient-to-br from-[#fef3e8] to-amber-50 rounded-2xl p-6 shadow-lg border border-[#f2a041]/40">
@@ -49,11 +52,11 @@ const GetInvolvedPage: React.FC = () => {
 
               <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-6 shadow-lg border border-indigo-100/40">
                 <div className="w-16 h-16 bg-indigo-200 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-3xl">🤝</span>
+                  <span className="text-3xl">🏛️</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-3">Partner</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">Infrastructure</h3>
                 <p className="text-slate-600 mb-4">
-                  Partner with us as an organization to provide resources, training, or employment opportunities.
+                  Support the establishment and sustenance of institutions that empower learners.
                 </p>
                 <button className="text-indigo-600 font-semibold hover:text-indigo-700">
                   Learn More →
@@ -64,12 +67,12 @@ const GetInvolvedPage: React.FC = () => {
                 <div className="w-16 h-16 bg-emerald-200 rounded-full flex items-center justify-center mb-4">
                   <span className="text-3xl">📢</span>
                 </div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-3">Spread the Word</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-3">Contact Us</h3>
                 <p className="text-slate-600 mb-4">
-                  Help us reach more students by sharing our mission with your network and community.
+                   Engage via our Karnataka headquarters: <a href="mailto:sohumtrust@zohomail.in" className="text-emerald-700 font-medium">sohumtrust@zohomail.in</a>. Transparent governance ensures every investment yields enduring societal dividends.
                 </p>
                 <button className="text-emerald-600 font-semibold hover:text-emerald-700">
-                  Learn More →
+                  Contact Now →
                 </button>
               </div>
             </div>

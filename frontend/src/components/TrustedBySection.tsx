@@ -3,7 +3,7 @@ import { partnerPlaceholders } from '../mockData';
 
 const TrustedBySection = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-white/90 to-amber-50/30 border-t border-orange-100/30 relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-b from-white/90 to-[#fef3e8]/30 border-t border-[#f2a041]/30 relative overflow-hidden">
       {/* Subtle educational decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Left - Small pencil icon */}
@@ -25,7 +25,7 @@ const TrustedBySection = () => {
         </div>
         
         {/* Thin separator line at top */}
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-200/40 to-transparent"></div>
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f9c483]/40 to-transparent"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -36,7 +36,7 @@ const TrustedBySection = () => {
           {partnerPlaceholders.map((partner) => (
             <div
               key={partner.id}
-              className="bg-white/80 backdrop-blur-sm rounded-xl px-8 py-6 border border-orange-100/50 hover:border-orange-300 transition-colors duration-200 shadow-sm"
+              className="bg-white/80 backdrop-blur-sm rounded-xl px-8 py-6 border border-[#f2a041]/50 hover:border-[#f2834b] transition-colors duration-200 shadow-sm"
             >
               <p className="text-slate-400 font-semibold text-sm whitespace-nowrap">
                 {partner.name}
@@ -46,7 +46,7 @@ const TrustedBySection = () => {
         </div>
         
         {/* Thin leafy separator line at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-200/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f9c483]/40 to-transparent"></div>
       </div>
     </section>
   );

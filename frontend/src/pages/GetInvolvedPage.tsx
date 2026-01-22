@@ -9,11 +9,11 @@ const GetInvolvedPage: React.FC = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-amber-50/60 via-orange-50/30 to-rose-50/20">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-[#fef3e8]/60 via-[#f2a041]/15 to-[#f15b59]/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-800">
-              Get <span className="text-orange-500">Involved</span>
+              Get <span className="text-[#f2a041]">Involved</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
               Join us in our mission to empower students and transform futures. Every contribution makes a difference.
@@ -34,15 +34,15 @@ const GetInvolvedPage: React.FC = () => {
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 shadow-lg border border-orange-100/40">
-                <div className="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gradient-to-br from-[#fef3e8] to-amber-50 rounded-2xl p-6 shadow-lg border border-[#f2a041]/40">
+                <div className="w-16 h-16 bg-[#f9c483] rounded-full flex items-center justify-center mb-4">
                   <span className="text-3xl">🎓</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-3">Volunteer</h3>
                 <p className="text-slate-600 mb-4">
                   Share your expertise and mentor students. Help them navigate their learning journey and career paths.
                 </p>
-                <button className="text-orange-600 font-semibold hover:text-orange-700">
+                <button className="text-[#e88f2d] font-semibold hover:text-orange-700">
                   Learn More →
                 </button>
               </div>
@@ -80,7 +80,7 @@ const GetInvolvedPage: React.FC = () => {
       {/* Contact Section */}
       <section className="py-16 bg-gradient-to-b from-white to-amber-50/40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-orange-100/40">
+          <div className="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-8 md:p-12 border border-[#f2a041]/40">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-6">
               Contact Us
             </h2>
@@ -93,7 +93,7 @@ const GetInvolvedPage: React.FC = () => {
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Name</label>
                 <input 
                   type="text" 
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f2a041]"
                   placeholder="Your name"
                 />
               </div>
@@ -102,7 +102,7 @@ const GetInvolvedPage: React.FC = () => {
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
                 <input 
                   type="email" 
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f2a041]"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -111,14 +111,14 @@ const GetInvolvedPage: React.FC = () => {
                 <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
                 <textarea 
                   rows={5}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f2a041]"
                   placeholder="How can we help you?"
                 ></textarea>
               </div>
               
               <button 
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-full bg-[#f2a041] hover:bg-[#e88f2d] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Send Message
               </button>

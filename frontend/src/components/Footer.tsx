@@ -9,7 +9,7 @@ const Footer = () => {
           {/* About */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold flex items-center space-x-2">
-              <Heart className="w-5 h-5 text-orange-400" />
+              <Heart className="w-5 h-5 text-[#f9c483]" />
               <span>Sohum Trust</span>
             </h3>
             <p className="text-slate-300 leading-relaxed">
@@ -21,10 +21,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-bold">Quick Links</h3>
             <ul className="space-y-2 text-slate-300">
-              <li><a href="#about" className="hover:text-orange-400 transition-colors duration-200">About Us</a></li>
-              <li><a href="#programs" className="hover:text-orange-400 transition-colors duration-200">What We Enable</a></li>
-              <li><a href="#impact" className="hover:text-orange-400 transition-colors duration-200">Impact</a></li>
-              <li><a href="#donate" className="hover:text-orange-400 transition-colors duration-200">Donate</a></li>
+              <li><a href="#about" className="hover:text-[#f9c483] transition-colors duration-200">About Us</a></li>
+              <li><a href="#programs" className="hover:text-[#f9c483] transition-colors duration-200">What We Enable</a></li>
+              <li><a href="#impact" className="hover:text-[#f9c483] transition-colors duration-200">Impact</a></li>
+              <li><a href="#donate" className="hover:text-[#f9c483] transition-colors duration-200">Donate</a></li>
             </ul>
           </div>
 
@@ -33,15 +33,15 @@ const Footer = () => {
             <h3 className="text-xl font-bold">Contact Us</h3>
             <ul className="space-y-3 text-slate-300">
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-orange-400" />
+                <Mail className="w-5 h-5 text-[#f9c483]" />
                 <span>info@sohumtrust.org</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-orange-400" />
+                <Phone className="w-5 h-5 text-[#f9c483]" />
                 <span>+91 XXXX XXXXXX</span>
               </li>
               <li className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-orange-400" />
+                <MapPin className="w-5 h-5 text-[#f9c483]" />
                 <span>India</span>
               </li>
             </ul>

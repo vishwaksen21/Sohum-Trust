@@ -9,11 +9,11 @@ const WhatWeEnablePage: React.FC = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-amber-50/60 via-orange-50/30 to-rose-50/20">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-[#fef3e8]/60 via-[#f2a041]/15 to-[#f15b59]/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-800">
-              What We <span className="text-orange-500">Enable</span>
+              What We <span className="text-[#f2a041]">Enable</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
               Empowering students with the skills and knowledge they need to succeed in the digital world.
@@ -40,7 +40,7 @@ const WhatWeEnablePage: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6">
+              <div className="bg-gradient-to-br from-[#fef3e8] to-amber-50 rounded-2xl p-6">
                 <h3 className="text-2xl font-bold text-slate-800 mb-4">💻 Tech Skills</h3>
                 <ul className="space-y-2 text-slate-600">
                   <li>• Web Development (HTML, CSS, JavaScript, React)</li>

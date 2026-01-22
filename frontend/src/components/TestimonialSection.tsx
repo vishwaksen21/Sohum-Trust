@@ -8,7 +8,7 @@ const TestimonialSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-br from-amber-50/50 via-orange-50/30 to-rose-50/20 relative overflow-hidden">
+    <section ref={ref} className="py-20 bg-gradient-to-br from-amber-50/50 via-[#fef3e8]/30 to-rose-50/20 relative overflow-hidden">
       {/* Watercolor Texture */}
       <div className="absolute inset-0 opacity-30 pointer-events-none" style={{
         backgroundImage: `radial-gradient(ellipse at top left, rgba(251, 140, 0, 0.1) 0%, transparent 50%), radial-gradient(ellipse at bottom right, rgba(134, 166, 138, 0.12) 0%, transparent 50%)`
@@ -40,7 +40,7 @@ const TestimonialSection = () => {
         </div>
         
         {/* Bottom Orange Glow */}
-        <div className="absolute bottom-10 right-10 w-64 h-64 bg-orange-100/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 bg-[#f2a041]/20 rounded-full blur-3xl"></div>
         
         {/* Center Top Soft Glow */}
         <div className="absolute top-0 left-1/2 w-56 h-56 bg-amber-100/25 rounded-full blur-3xl transform -translate-x-1/2"></div>
@@ -54,7 +54,7 @@ const TestimonialSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.div 
-            className="relative bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 border border-orange-100/40"
+            className="relative bg-white/90 backdrop-blur-sm rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-8 md:p-12 border border-[#f2a041]/40"
             style={{
               boxShadow: '0 20px 40px -10px rgba(251, 140, 0, 0.15), 0 10px 20px -5px rgba(251, 140, 0, 0.1)'
             }}
@@ -81,7 +81,7 @@ const TestimonialSection = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-orange-500 p-2 rounded-full shadow-lg">
+                  <div className="absolute -top-2 -right-2 bg-[#f2a041] p-2 rounded-full shadow-lg">
                     <Quote className="w-5 h-5 text-white" />
                   </div>
                 </div>

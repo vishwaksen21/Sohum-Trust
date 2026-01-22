@@ -10,11 +10,11 @@ const ImpactPage: React.FC = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 bg-gradient-to-br from-amber-50/60 via-orange-50/30 to-rose-50/20">
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-[#fef3e8]/60 via-[#f2a041]/15 to-[#f15b59]/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold text-slate-800">
-              Our <span className="text-orange-500">Impact</span>
+              Our <span className="text-[#f2a041]">Impact</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
               See how we're transforming lives and creating opportunities for students across India.
@@ -35,9 +35,9 @@ const ImpactPage: React.FC = () => {
             </h2>
             
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 shadow-lg">
+              <div className="bg-gradient-to-br from-[#fef3e8] to-amber-50 rounded-2xl p-8 shadow-lg">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-16 h-16 bg-[#f9c483] rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-2xl">👨‍💻</span>
                   </div>
                   <div>

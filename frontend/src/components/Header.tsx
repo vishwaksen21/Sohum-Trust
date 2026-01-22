@@ -19,34 +19,35 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-sm border-b border-orange-100/40 shadow-sm">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-[#EC167F] to-[#F5A044] border-b border-white/20 shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
 
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <div className="relative w-12 h-12">
-              <img 
-                src="/logo_sohum.png" 
-                alt="Sohum Trust Logo" 
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <span className="text-xl md:text-2xl font-bold text-slate-700 tracking-wide">
-              SOHUM TRUST
-            </span>
+        {/* Increased header height */}
+        <div className="flex items-center justify-between h-16 md:h-20">
+
+          {/* BIG LOGO */}
+          <Link to="/" className="flex items-center">
+            <img
+              src="/logo_sohum.png"
+              alt="Sohum Trust Logo"
+              className="
+                h-14 md:h-16 lg:h-20 
+                w-auto 
+                object-contain
+              "
+            />
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
+                className={`text-sm lg:text-base font-medium transition-all ${
                   isActive(item.path)
-                    ? 'text-orange-500'
-                    : 'text-slate-700 hover:text-orange-500'
+                    ? 'text-white font-bold'
+                    : 'text-white/90 hover:text-white'
                 }`}
               >
                 {item.label}
@@ -56,23 +57,32 @@ const Header: React.FC = () => {
 
           {/* CTA */}
           <Link to="/get-involved">
-            <Button className="hidden md:block bg-orange-500 hover:bg-orange-600 text-white px-6 md:px-8 py-2 md:py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-200 font-semibold text-sm md:text-base">
+            <Button className="
+              hidden md:block 
+              bg-white 
+              text-[#EC167F]
+              hover:bg-white/90 
+              px-8 py-3 
+              rounded-full 
+              font-bold 
+              shadow-lg
+            ">
               Donate Now
             </Button>
           </Link>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-slate-700 hover:text-orange-500"
-            aria-label="Toggle menu"
+            className="md:hidden p-2 text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
@@ -82,35 +92,32 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-orange-100/40">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden pb-6 border-t border-white/30 bg-gradient-to-r from-[#EC167F] to-[#F5A044]">
+            <nav className="flex flex-col space-y-4 pt-4">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`font-medium transition-colors duration-200 ${
+                  className={`font-medium ${
                     isActive(item.path)
-                      ? 'text-orange-500'
-                      : 'text-slate-700 hover:text-orange-500'
+                      ? 'text-white font-bold'
+                      : 'text-white/90'
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
+
               <Link to="/get-involved" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all duration-200 font-semibold">
+                <Button className="w-full bg-white text-[#EC167F] font-bold rounded-full py-3">
                   Donate Now
                 </Button>
               </Link>
             </nav>
           </div>
         )}
-      </div>
-      
-      {/* Thin divider line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px">
-        <div className="h-full bg-gradient-to-r from-transparent via-orange-200/50 to-transparent"></div>
+
       </div>
     </header>
   );

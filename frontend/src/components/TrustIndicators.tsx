@@ -16,7 +16,7 @@ const TrustIndicators = () => {
     {
       icon: FileText,
       text: 'Impact Reports Shared Annually',
-      color: 'text-orange-600'
+      color: 'text-[#e88f2d]'
     }
   ];
 

@@ -23,7 +23,7 @@ const WhatWeEnable = () => {
       icon: Laptop,
       title: 'Digital Literacy',
       description: 'Essential computer and internet skills',
-      color: 'from-orange-500 to-orange-600'
+      color: 'from-[#f2a041] to-[#e88f2d]'
     },
     {
       icon: Users,
@@ -56,7 +56,7 @@ const WhatWeEnable = () => {
             return (
               <motion.div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] transition-all duration-300 group relative overflow-hidden"
                 initial={{ opacity: 0, y: 40, scale: 0.95 }}
                 animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 40, scale: 0.95 }}
                 transition={{ 
@@ -64,14 +64,18 @@ const WhatWeEnable = () => {
                   ease: "easeOut", 
                   delay: index * 0.1 
                 }}
+                whileHover={{ y: -8 }}
               >
-                <div className={`bg-gradient-to-br ${program.color} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                {/* Decorative background gradient on hover */}
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${program.color} opacity-0 group-hover:opacity-5 rounded-bl-[100px] transition-opacity duration-500 pointer-events-none`}></div>
+
+                <div className={`bg-gradient-to-br ${program.color} w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300`}>
                   <Icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-700 mb-2">
+                <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-[#f2a041] transition-colors duration-300">
                   {program.title}
                 </h3>
-                <p className="text-slate-600">
+                <p className="text-slate-500 leading-relaxed">
                   {program.description}
                 </p>
               </motion.div>

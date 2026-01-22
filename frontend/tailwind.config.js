@@ -8,8 +8,10 @@ module.exports = {
   theme: {
   	extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Professional, clean font for tech vibe
-        mono: ['JetBrains Mono', 'monospace'], // For code snippets or tech accents
+        sans: ['DM Sans', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        heading: ['Playfair Display', 'serif'],
+        body: ['DM Sans', 'sans-serif'],
       },
   		borderRadius: {
   			lg: 'var(--radius)',

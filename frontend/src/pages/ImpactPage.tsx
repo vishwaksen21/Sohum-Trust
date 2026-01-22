@@ -17,7 +17,7 @@ const ImpactPage: React.FC = () => {
               Our <span className="text-[#f2a041]">Impact</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-              Transparent governance ensures every investment yields enduring societal dividends.
+              Witness the transformative power of education and the lasting change we create together.
             </p>
           </div>
         </div>
@@ -92,7 +92,7 @@ const ImpactPage: React.FC = () => {
               Creating Lasting Change
             </h2>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Every contribution helps us reach more students and create more success stories. Together, we're building a future where quality tech education is accessible to all, regardless of location or background.
+              Every contribution helps us reach more students and create more success stories. Together, we're building a future where quality education is accessible to all, regardless of location or background.
             </p>
           </div>
         </div>

@@ -37,13 +37,6 @@ const Home: React.FC = () => {
       <div className="min-h-screen bg-transparent">
         <Header />
         <HeroSection />
-        <MissionSection />
-        <ImpactStats />
-        <TrustIndicators />
-        <WhatWeEnable />
-        <DonationCards />
-        <TestimonialSection />
-        <TrustedBySection />
         <Footer />
       </div>
     </PageWrapper>

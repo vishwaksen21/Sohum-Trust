@@ -10,7 +10,7 @@ const WhatWeEnable = () => {
     {
       icon: BookOpen,
       title: 'Foundational & Scholastic Excellence',
-      description: 'Primary, higher primary, secondary, and higher secondary schools delivering holistic curricula. Undergraduate colleges advancing basic sciences, commerce, arts, and humanities.',
+      description: 'Primary, higher primary, secondary, and higher secondary schools delivering holistic curricula in core academic branches. Undergraduate colleges advancing basic sciences, commerce, arts, social sciences, economics, and humanities.',
       color: 'from-indigo-500 to-indigo-600',
       iconColor: 'text-indigo-500',
       image: '/children1.png'
@@ -18,7 +18,7 @@ const WhatWeEnable = () => {
     {
       icon: Briefcase,
       title: 'Professional & Vocational Mastery',
-      description: 'Prestigious institutions for medical, para-medical, biological sciences, and vocational disciplines. Premier engineering colleges and polytechnics.',
+      description: 'Prestigious institutions for medical, para-medical, biological sciences, and vocational disciplines. Premier engineering colleges, polytechnics, industrial training institutes, and sector-specific engineering pathways.',
       color: 'from-emerald-500 to-emerald-600',
       iconColor: 'text-emerald-500',
       image: '/children2.png'
@@ -26,7 +26,7 @@ const WhatWeEnable = () => {
     {
       icon: Lightbulb,
       title: 'Specialized Innovation Hubs',
-      description: 'Advanced training academies in hospitality, textiles, emerging sectors, and pioneering centers for distance education.',
+      description: 'Advanced training academies in hospitality, textiles, and emerging sectors. Pioneering centers for distance education through e-learning, correspondence, postal coaching, and hybrid modalities.',
       color: 'from-[#f2a041] to-[#e88f2d]',
       iconColor: 'text-orange-500',
       image: '/children3.png'
@@ -34,7 +34,7 @@ const WhatWeEnable = () => {
     {
       icon: Palette,
       title: 'Cultural & Research Vanguard',
-      description: 'Veda Paatashaalas, Sanskrit patashalas, yoga sanctuaries, and research facilities exploring education, social sciences, and arts.',
+      description: 'Veda Paatashaalas, Sanskrit patashalas, yoga sanctuaries, and conservatories for music, dance, folk arts, and sports. State-of-the-art research facilities exploring education, social sciences, arts, humanities, science, and technology.',
       color: 'from-purple-500 to-purple-600',
       iconColor: 'text-purple-500',
       image: '/children5.png'

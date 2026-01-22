@@ -13,7 +13,7 @@ const Footer = () => {
               <span>Sohum Trust</span>
             </h3>
             <p className="text-slate-300 leading-relaxed">
-              Empowering students in Tier 2 and Tier 3 cities with quality tech education and building futures.
+              Sohum Trust champions comprehensive educational advancement, establishing and sustaining institutions that empower learners at every stage.
             </p>
           </div>
 

@@ -1,12 +1,229 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import DonationCards from '../components/Donation';
+import React, { useState } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { Heart, Mail, MapPin, Phone } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+
+import { donationTiers } from '../mockData';
+import { Button } from '../components/ui/button';
+
+const SiteHeader: React.FC = () => {
+  const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: 'Home', path: '/' },
+    { label: 'About Us', path: '/about' },
+    { label: 'What We Enable', path: '/what-we-enable' },
+    { label: 'Impact', path: '/impact' },
+    { label: 'Get Involved', path: '/get-involved' },
+  ];
+
+  const isActive = (path: string) => location.pathname === path;
+
+  return (
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-[#EC167F] to-[#F5A044] border-b border-white/20 shadow-md">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          <Link to="/" className="flex items-center">
+            <img src="/logo_sohum.png" alt="Sohum Trust Logo" className="h-14 md:h-16 lg:h-20 w-auto object-contain" />
+          </Link>
+
+          <nav className="hidden md:flex items-center space-x-10">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-sm lg:text-base font-medium transition-all ${
+                  isActive(item.path) ? 'text-white font-bold' : 'text-white/90 hover:text-white'
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <Link to="/get-involved">
+            <Button className="hidden md:block bg-white text-[#EC167F] hover:bg-white/90 px-8 py-3 rounded-full font-bold shadow-lg">
+              Donate Now
+            </Button>
+          </Link>
+
+          <button
+            className="md:hidden p-2 text-white"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+
+        {isMobileMenuOpen && (
+          <div className="md:hidden pb-6 border-t border-white/30 bg-gradient-to-r from-[#EC167F] to-[#F5A044]">
+            <nav className="flex flex-col space-y-4 pt-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`font-medium ${
+                    isActive(item.path) ? 'text-white font-bold' : 'text-white/90'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              <Link to="/get-involved" onClick={() => setIsMobileMenuOpen(false)}>
+                <Button className="w-full bg-white text-[#EC167F] font-bold rounded-full py-3">
+                  Donate Now
+                </Button>
+              </Link>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+const SiteFooter: React.FC = () => {
+  return (
+    <footer className="bg-slate-800 text-white py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold flex items-center space-x-2">
+              <Heart className="w-5 h-5 text-[#f9c483]" />
+              <span>Sohum Trust</span>
+            </h3>
+            <p className="text-slate-300 leading-relaxed">
+              Sohum Trust champions comprehensive educational advancement,
+              establishing and sustaining institutions that empower learners at
+              every stage.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold">Quick Links</h3>
+            <ul className="space-y-2 text-slate-300">
+              <li><Link to="/about" className="hover:text-[#f9c483] transition-colors duration-200">About Us</Link></li>
+              <li><Link to="/what-we-enable" className="hover:text-[#f9c483] transition-colors duration-200">What We Enable</Link></li>
+              <li><Link to="/impact" className="hover:text-[#f9c483] transition-colors duration-200">Impact</Link></li>
+              <li><Link to="/get-involved" className="hover:text-[#f9c483] transition-colors duration-200">Get Involved</Link></li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold">Contact Us</h3>
+            <ul className="space-y-3 text-slate-300">
+              <li className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-[#f9c483]" />
+                <span>sohumtrust@zohomail.in</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-[#f9c483]" />
+                <span>+91 XXXX XXXXXX</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-[#f9c483]" />
+                <span>Karnataka, India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-slate-700 mt-10 pt-8 text-center text-slate-400">
+          <p>&copy; {new Date().getFullYear()} Sohum Trust. All rights reserved. Building futures through education.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+const DonationSection: React.FC = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <section ref={ref} className="py-16 bg-[#FBF7F1]">
+      <div className="container mx-auto px-6">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+        >
+          <h2 className="heading text-4xl font-bold text-slate-800 mb-4">
+            How Your Donation Helps
+          </h2>
+          <p className="body-text text-lg text-slate-600">
+            Every contribution creates real impact for students in need.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-10">
+          {donationTiers.map((tier: any, index: number) => {
+            const isFeatured = tier.amount === '₹10,000';
+
+            return (
+              <motion.div
+                key={tier.id}
+                className={`rounded-3xl overflow-hidden transition-all bg-white/90 backdrop-blur-sm shadow-[0_20px_40px_rgba(0,0,0,0.08)] ${
+                  isFeatured ? 'scale-105 border-2 border-indigo-600' : ''
+                }`}
+                initial={{ opacity: 0, y: 40 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+              >
+                <div className="h-56">
+                  <img src={tier.image} alt={tier.title} className="w-full h-full object-cover" />
+                </div>
+
+                <div className="p-8 space-y-4">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[#E66A2C] font-bold">₹</span>
+                    <span className="text-3xl font-bold text-slate-800">
+                      {String(tier.amount).replace('₹', '')}
+                    </span>
+                  </div>
+
+                  <h3 className="heading text-xl font-semibold text-slate-700">{tier.title}</h3>
+                  <p className="body-text text-slate-600">{tier.description}</p>
+
+                  <div className="bg-indigo-50/70 px-4 py-3 rounded-2xl text-sm text-indigo-700 font-medium">
+                    ✓ Impact: {tier.impact}
+                  </div>
+
+                  <Button
+                    className={`w-full py-5 rounded-full text-lg font-semibold ${
+                      isFeatured
+                        ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                        : 'bg-[#E66A2C] hover:bg-[#d85f25] text-white'
+                    }`}
+                  >
+                    Donate
+                  </Button>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const GetInvolvedPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent">
-      <Header />
+      <SiteHeader />
       
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 bg-gradient-to-br from-[#fef3e8]/60 via-[#f2a041]/15 to-[#f15b59]/10">
@@ -23,7 +240,7 @@ const GetInvolvedPage: React.FC = () => {
       </section>
 
       {/* Donation Cards */}
-      <DonationCards />
+      <DonationSection />
 
       {/* Ways to Help Section */}
       <section className="py-16 bg-white">
@@ -130,7 +347,7 @@ const GetInvolvedPage: React.FC = () => {
         </div>
       </section>
 
-      <Footer />
+      <SiteFooter />
     </div>
   );
 };

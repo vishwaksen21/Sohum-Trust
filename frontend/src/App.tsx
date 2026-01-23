@@ -2,21 +2,21 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Header from "./components/Header";
-import HeroSection from "./components/Hero";
-import MissionSection from "./components/Mission"; // Correct import path
-import ImpactStats from "./components/Impact"; // Correct import path
-import TrustIndicators from "./components/Trust"; // Correct import path
-import WhatWeEnable from "./components/Programs"; // Correct import path
-import DonationCards from "./components/Donation"; // Correct import path
-import TestimonialSection from "./components/Testimonials"; // Correct import path
-import TrustedBySection from "./components/TrustedBy"; // Correct import path
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import WhatWeEnablePage from "./pages/WhatWeEnablePage";
 import ImpactPage from "./pages/ImpactPage";
 import GetInvolvedPage from "./pages/GetInvolvedPage";
-import ScrollToTop from "./components/ScrollToTop";
+
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -31,25 +31,13 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
-const Home: React.FC = () => {
-  return (
-    <PageWrapper>
-      <div className="min-h-screen bg-transparent">
-        <Header />
-        <HeroSection />
-        <Footer />
-      </div>
-    </PageWrapper>
-  );
-};
-
 const AnimatedRoutes: React.FC = () => {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
         <Route path="/about" element={<PageWrapper><AboutUs /></PageWrapper>} />
         <Route path="/what-we-enable" element={<PageWrapper><WhatWeEnablePage /></PageWrapper>} />
         <Route path="/impact" element={<PageWrapper><ImpactPage /></PageWrapper>} />

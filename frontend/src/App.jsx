@@ -8,7 +8,7 @@ import WhatWeEnablePage from "./pages/WhatWeEnablePage";
 import ImpactPage from "./pages/ImpactPage";
 import GetInvolvedPage from "./pages/GetInvolvedPage";
 
-const ScrollToTop: React.FC = () => {
+const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   React.useEffect(() => {
@@ -18,7 +18,7 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 
-const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const PageWrapper = ({ children }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
-const AnimatedRoutes: React.FC = () => {
+const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
@@ -47,7 +47,7 @@ const AnimatedRoutes: React.FC = () => {
   );
 };
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="App">
       <BrowserRouter>

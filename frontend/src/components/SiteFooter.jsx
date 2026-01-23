@@ -2,7 +2,7 @@ import React from 'react';
 import { Heart, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const SiteFooter: React.FC = () => {
+const SiteFooter = () => {
   return (
     <footer className="bg-slate-800 text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

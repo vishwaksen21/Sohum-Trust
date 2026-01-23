@@ -138,4 +138,19 @@ code {
         border-top-color: inherit;
         border-bottom-color: inherit;
     }
+
+    .mask-logo {
+  mask-image: url('../public/logo_sohum.png');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.-webkit-mask-logo {
+  -webkit-mask-image: url('../public/logo_sohum.png');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
 }

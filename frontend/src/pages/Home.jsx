@@ -117,8 +117,7 @@ const practice = [
 
 export default function Home() {
   const [index, setIndex] = useState(0);
-  const [activeValue, setActiveValue] =
-    useState<null | (typeof valuesInAction)[0]>(null);
+  const [activeValue, setActiveValue] = useState(null);
 
   const next = useCallback(
     () => setIndex((i) => (i + 1) % slides.length),
@@ -139,7 +138,7 @@ export default function Home() {
       <SiteHeader />
 
       {/* ================= HERO ================= */}
-      <section className="relative bg-[#F2EAE2] py-16 min-h-[650px] flex items-center overflow-hidden">
+      <section className="relative bg-[#F2EAE2] py-14 min-h-[350px] flex items-center overflow-hidden">
   {/* VIEWPORT */}
   <div className="relative w-full">
 
@@ -149,7 +148,7 @@ export default function Home() {
         flex items-center gap-6
         [--slide-width:85vw] [--gap:24px] [--center-offset:7.5vw]
         md:[--slide-width:70vw] md:[--center-offset:15vw]
-        lg:[--slide-width:1000px] lg:[--center-offset:calc(50vw-500px)]
+        lg:[--slide-width:1000px] lg:[--center-offset:calc(50vw-550px)]
       "
       animate={{
         x: `calc(-${index} * (var(--slide-width) + var(--gap)) + var(--center-offset))`,
@@ -166,32 +165,32 @@ export default function Home() {
           }}
           transition={{ duration: 0.4 }}
         >
-          {/* CARD */}
-          <div className="bg-[#FAF7F4] rounded-[40px] grid md:grid-cols-2 min-h-[500px] shadow-2xl shadow-black/5 overflow-hidden">
+          {/* CARD - Increased slightly to 450px */}
+          <div className="bg-[#FAF7F4] rounded-[40px] grid md:grid-cols-2 min-h-[450px] shadow-2xl shadow-black/5 overflow-hidden">
             
-            {/* TEXT */}
-            <div className="p-10 md:p-16 flex flex-col justify-center">
-              <span className="tracking-[0.2em] uppercase text-[13px] font-bold text-[#D2693E] mb-6">
+            {/* TEXT - Balanced padding for the 450px height */}
+            <div className="p-10 md:p-14 flex flex-col justify-center">
+              <span className="tracking-[0.2em] uppercase text-[13px] font-bold text-[#D2693E] mb-4">
                 {s.subtitle}
               </span>
 
-              <h2 className="font-serif text-5xl md:text-6xl font-medium text-[#431407] mb-8 leading-[1.1]">
+              <h2 className="font-serif text-4xl md:text-5xl font-medium text-[#431407] mb-6 leading-[1.1]">
                 {s.title}
               </h2>
 
-              <p className="text-[18px] leading-relaxed text-slate-600 mb-10 max-w-sm">
+              <p className="text-[17px] leading-relaxed text-slate-600 mb-8 max-w-sm">
                 {s.text}
               </p>
 
               <Link to="/get-involved">
-                <button className="rounded-full px-10 py-4 bg-[#D2693E] hover:bg-[#bc5a32] text-white font-semibold transition-colors">
+                <button className="w-fit rounded-full px-10 py-3.5 bg-[#D2693E] hover:bg-[#bc5a32] text-white font-semibold transition-colors">
                   Support Education
                 </button>
               </Link>
             </div>
 
-            {/* IMAGE */}
-            <div className="relative min-h-[300px]">
+            {/* IMAGE - min-h set to 250px for mobile, full height for desktop */}
+            <div className="relative min-h-[250px] md:min-h-full">
               <img
                 src={s.image}
                 alt={s.title}

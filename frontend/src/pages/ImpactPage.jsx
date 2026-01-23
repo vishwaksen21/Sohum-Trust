@@ -6,7 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { testimonial } from '../mockData';
 import { Button } from '../components/ui/button';
 
-const SiteHeader: React.FC = () => {
+const SiteHeader = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,7 +18,7 @@ const SiteHeader: React.FC = () => {
     { label: 'Get Involved', path: '/get-involved' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path) => location.pathname === path;
 
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-[#EC167F] to-[#F5A044] border-b border-white/20 shadow-md">
@@ -94,7 +94,7 @@ const SiteHeader: React.FC = () => {
   );
 };
 
-const SiteFooter: React.FC = () => {
+const SiteFooter = () => {
   return (
     <footer className="bg-slate-800 text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -181,8 +181,8 @@ const impactData = [
   },
 ];
 
-const ImpactGallery: React.FC = () => {
-  const [selectedId, setSelectedId] = useState<number | null>(null);
+const ImpactGallery = () => {
+  const [selectedId, setSelectedId] = useState(null);
 
   return (
     <section id="impact" className="py-12 bg-[#F9F4EF]">
@@ -314,7 +314,7 @@ const ImpactGallery: React.FC = () => {
   );
 };
 
-const TestimonialsSection: React.FC = () => {
+const TestimonialsSection = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -373,7 +373,7 @@ const TestimonialsSection: React.FC = () => {
   );
 };
 
-const ImpactPage: React.FC = () => {
+const ImpactPage = () => {
   return (
     <div className="min-h-screen bg-transparent">
       <SiteHeader />
